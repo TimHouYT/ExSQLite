@@ -15,6 +15,8 @@
 		894D799726DEA8FD00889064 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894D799526DEA8FD00889064 /* LaunchScreen.storyboard */; };
 		894D79A226DEA8FD00889064 /* ExSQLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D79A126DEA8FD00889064 /* ExSQLiteTests.swift */; };
 		894D79AD26DEA8FD00889064 /* ExSQLiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D79AC26DEA8FD00889064 /* ExSQLiteUITests.swift */; };
+		894D79BC26DEADAC00889064 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 894D79BB26DEAD9000889064 /* libsqlite3.tbd */; };
+		894D79BF26DEB79F00889064 /* SQLiteConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894D79BE26DEB79F00889064 /* SQLiteConnect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		894D79A826DEA8FD00889064 /* ExSQLiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExSQLiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		894D79AC26DEA8FD00889064 /* ExSQLiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExSQLiteUITests.swift; sourceTree = "<group>"; };
 		894D79AE26DEA8FD00889064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		894D79BB26DEAD9000889064 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		894D79BD26DEAEBD00889064 /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
+		894D79BE26DEB79F00889064 /* SQLiteConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteConnect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894D79BC26DEADAC00889064 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,7 @@
 				894D79A026DEA8FD00889064 /* ExSQLiteTests */,
 				894D79AB26DEA8FD00889064 /* ExSQLiteUITests */,
 				894D798826DEA8F900889064 /* Products */,
+				894D79BA26DEAD9000889064 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +106,11 @@
 		894D798926DEA8F900889064 /* ExSQLite */ = {
 			isa = PBXGroup;
 			children = (
+				894D79BD26DEAEBD00889064 /* BridgeHeader.h */,
 				894D798A26DEA8F900889064 /* AppDelegate.swift */,
 				894D798C26DEA8F900889064 /* SceneDelegate.swift */,
 				894D798E26DEA8F900889064 /* ViewController.swift */,
+				894D79BE26DEB79F00889064 /* SQLiteConnect.swift */,
 				894D799026DEA8F900889064 /* Main.storyboard */,
 				894D799326DEA8FD00889064 /* Assets.xcassets */,
 				894D799526DEA8FD00889064 /* LaunchScreen.storyboard */,
@@ -126,6 +135,14 @@
 				894D79AE26DEA8FD00889064 /* Info.plist */,
 			);
 			path = ExSQLiteUITests;
+			sourceTree = "<group>";
+		};
+		894D79BA26DEAD9000889064 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				894D79BB26DEAD9000889064 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +277,7 @@
 			files = (
 				894D798F26DEA8F900889064 /* ViewController.swift in Sources */,
 				894D798B26DEA8F900889064 /* AppDelegate.swift in Sources */,
+				894D79BF26DEB79F00889064 /* SQLiteConnect.swift in Sources */,
 				894D798D26DEA8F900889064 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +463,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = TimWork.ExSQLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ExSQLite/BridgeHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,6 +483,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = TimWork.ExSQLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ExSQLite/BridgeHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
